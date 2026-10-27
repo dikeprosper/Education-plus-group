@@ -4,91 +4,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Education Plus ISR | Opening Doors. Creating Global Opportunities.</title>
-    <!-- Tailwind CSS v3 with Forms & Container-Queries Plugins -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <!-- Tailwind Custom Configuration -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: "#0b2545",
-                navy: "#0059b3",
-                navyDark: "#0059b3",
-                orange: "#e87807",
-                darkOrange: "#ca6704",
-                royal: "#1F5FA8",
-                royalLight: "#2575D0",
-                ice: "#F4F7FB",
-                tint: "#EEF4FA",
-                border: "#E2E8F0",
-              },
-              secondary: "#545f74",
-              "surface-container-high": "#e8e7ec",
-              "secondary-container": "#d5e0f9",
-              "primary-container": "#002a59",
-              "primary-fixed": "#d6e3ff",
-              "tertiary-container": "#4d1c01",
-              "on-primary-fixed": "#001b3d",
-              "on-secondary-container": "#586378",
-              primary: "#001634",
-              "on-primary-container": "#7593c8",
-              "on-secondary-fixed-variant": "#3c475b",
-              "surface-bright": "#faf9fd",
-              "tertiary-fixed": "#ffdbcc",
-              "on-error": "#ffffff",
-              error: "#ba1a1a",
-              "on-background": "#1a1c1f",
-              "on-secondary-fixed": "#111c2e",
-              "on-surface": "#1a1c1f",
-              "on-secondary": "#ffffff",
-              background: "#faf9fd",
-              "error-container": "#ffdad6",
-              "inverse-primary": "#a9c7ff",
-              "on-tertiary-container": "#cb805b",
-              "inverse-surface": "#2f3034",
-              outline: "#747780",
-              surface: "#faf9fd",
-              "primary-fixed-dim": "#a9c7ff",
-              "surface-container-highest": "#e3e2e7",
-              "surface-dim": "#dad9de",
-              "on-tertiary-fixed-variant": "#703718",
-              "surface-variant": "#e3e2e7",
-              "surface-container": "#eeedf2",
-              "on-surface-variant": "#43474f",
-              "surface-tint": "#405f90",
-              "on-tertiary": "#ffffff",
-              "outline-variant": "#c4c6d0",
-              "secondary-fixed-dim": "#bcc7df",
-              "on-primary": "#ffffff",
-              "on-tertiary-fixed": "#351000",
-              tertiary: "#2d0d00",
-              "secondary-fixed": "#d8e3fc",
-              "inverse-on-surface": "#f1f0f5",
-              "on-error-container": "#93000a",
-              "surface-container-lowest": "#ffffff",
-              "on-primary-fixed-variant": "#274777",
-              "surface-container-low": "#f4f3f8",
-              "tertiary-fixed-dim": "#ffb693",
-            },
-            fontFamily: {
-              sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
-              headline: ["Plus Jakarta Sans"],
-              display: ["Plus Jakarta Sans"],
-              body: ["Plus Jakarta Sans"],
-              label: ["Plus Jakarta Sans"],
-            },
-            boxShadow: {
-              subtle: "0 4px 20px -2px rgba(18, 55, 107, 0.06)",
-              "card-hover": "0 12px 30px -4px rgba(18, 55, 107, 0.12)",
-            },
-            fontSize: {},
-            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
-          },
-        },
-      };
-    </script>
+    <link rel="stylesheet" href="output.css">
 
     <!-- Custom Styles: Typography, Flags & Accents -->
     <style data-purpose="base-styling">
@@ -189,7 +106,7 @@
       
       #destinations {
         background-image:
-          linear-gradient(90deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
           url("./image/bg.png");
         background-size: cover;
         background-position: top center;
@@ -209,6 +126,24 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style data-purpose="aos-safety">
+      /* Clip anything that slides in so it can never widen the page */
+      section,
+      footer {
+        overflow-x: clip;
+      }
+      /* If JS is off, never leave content hidden */
+    </style>
+    <noscript>
+      <style>
+        [data-aos] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
   </head>
 
   <body class="antialiased selection:bg-brand-royal selection:text-white">
@@ -471,7 +406,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           <!-- Left Content Column -->
           <div class="lg:col-span-7 space-y-6">
-            <div
+            <div data-aos="fade-down"
               class="flex items-center text-slate-500 font-semibold text-[10px] sm:text-xs tracking-widest uppercase mb-4"
             >
               <span class="">STUDY</span>
@@ -482,17 +417,17 @@
               <span class="mx-2.5 text-slate-400">|</span>
               <span class="">SETTLE</span>
             </div>
-            <h1
+            <h1 data-aos="fade-up"
               class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-950 leading-[1.08] tracking-tight"
             >
               Study Abroad<br /><span class="text-brand-orange">Made Easy</span>
             </h1>
-            <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+            <p data-aos="fade-up" class="text-sm text-slate-600 max-w-2xl leading-relaxed">
               Personalised guidance for students applying to universities in the United Kingdom,
               United States, Canada and Australia, from choosing a course to your student visa.
             </p>
             <!-- Action Buttons -->
-            <div class="pt-2 flex items-center gap-4 text-[4px]">
+            <div data-aos="fade-up" class="pt-2 flex items-center gap-4 text-[4px]">
               <a
                 class="inline-flex items-center px-7 py-2.5 rounded-md text-white bg-brand-navy hover:bg-brand-navyDark transition-all duration-200 shadow-md shadow-brand-navy/25 text-sm"
                 href="#faq-section"
@@ -525,7 +460,7 @@
               >
             </div>
             <!-- 3 Quick Trust Chips -->
-            <div class="pt-6 flex flex-wrap gap-5 border-t border-slate-200">
+            <div data-aos="fade-up" class="pt-6 flex flex-wrap gap-5 border-t border-slate-200">
               <div class="flex items-center space-x-2 text-slate-700 font-semibold text-xs">
                 <span
                   class="w-6 h-6 rounded-full bg-brand-tint text-brand-royal flex items-center justify-center shrink-0"
@@ -575,7 +510,7 @@
           </div>
           <!-- Right Visual Showcase with Floating Card -->
           <div class="lg:col-span-5 relative">
-            <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="relative mx-auto max-w-md lg:max-w-none">
               <div
                 class="absolute -top-6 -left-6 w-72 h-72 bg-brand-royal/10 rounded-full blur-3xl"
               ></div>
@@ -639,19 +574,19 @@
         <div
           class="grid grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-brand-royal/40"
         >
-          <div class="flex flex-col items-center text-center">
+          <div data-aos="fade-up" class="flex flex-col items-center text-center">
             <div class="text-1xl lg:text-3xl font-extrabold text-white tracking-tight">4 Key</div>
             <div class="text-[10px] lg:text-[14px] text-blue-200">Global Destinations</div>
           </div>
-          <div class="flex flex-col items-center text-center">
+          <div data-aos="fade-up" class="flex flex-col items-center text-center">
             <div class="text-1xl lg:text-3xl font-extrabold text-white tracking-tight">50+</div>
             <div class="text-[10px] lg:text-[14px] text-blue-200">Top Universities</div>
           </div>
-          <div class="flex flex-col items-center text-center">
+          <div data-aos="fade-up" class="flex flex-col items-center text-center">
             <div class="text-1xl lg:text-3xl font-extrabold text-white tracking-tight">100%</div>
             <div class="text-[10px] lg:text-[14px] text-blue-200">Dedicated Advisory</div>
           </div>
-          <div class="flex flex-col items-center text-center">
+          <div data-aos="fade-up" class="flex flex-col items-center text-center">
             <div class="text-1xl lg:text-3xl font-extrabold text-white tracking-tight">24-48h</div>
             <div class="text-[10px] lg:text-[14px] text-blue-200">Prompt Response</div>
           </div>
@@ -663,7 +598,7 @@
     <!-- BEGIN: CoreServicesOverview -->
     <section class="py-20 bg-brand-ice" data-purpose="services-overview" id="services">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
+        <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-14">
           <span
             class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
           >
@@ -679,8 +614,8 @@
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <!-- Card 1: ISR (Flagship) -->
-          <div
-            class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 cursor-pointer"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 cursor-pointer"
             onclick="openServiceModal('isr')"
             role="button"
             tabindex="0"
@@ -764,11 +699,11 @@
                 >Admissions &amp; Placement</span
               >
             </div>
-          </div>
+          </div></div>
 
           <!-- Card 2: Visa Support -->
-          <div
-            class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 cursor-pointer"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 cursor-pointer"
             onclick="openServiceModal('visa')"
             role="button"
             tabindex="0"
@@ -844,7 +779,7 @@
                 >Checklists &amp; Vetting</span
               >
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </section>
@@ -853,7 +788,7 @@
     <!-- BEGIN: StudyDestinations -->
     <section class="py-20 bg-white" data-purpose="study-destinations" id="destinations">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div data-aos="fade-up" class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <span class="text-brand-navy font-bold text-[9px] uppercase tracking-widest">
               Key Global Hubs
@@ -885,8 +820,8 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Destination 1: UK -->
-          <div
-            class="rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
             onclick="openUniversityLightbox('uk')"
           >
             <div>
@@ -940,10 +875,10 @@
                 >→</span
               >
             </div>
-          </div>
+          </div></div>
           <!-- Destination 2: USA -->
-          <div
-            class="rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
             onclick="openUniversityLightbox('usa')"
           >
             <div>
@@ -997,10 +932,10 @@
                 >→</span
               >
             </div>
-          </div>
+          </div></div>
           <!-- Destination 3: Canada -->
-          <div
-            class="rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
             onclick="openUniversityLightbox('canada')"
           >
             <div>
@@ -1054,10 +989,10 @@
                 >→</span
               >
             </div>
-          </div>
+          </div></div>
           <!-- Destination 4: Australia -->
-          <div
-            class="rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between cursor-pointer"
             onclick="openUniversityLightbox('australia')"
           >
             <div>
@@ -1112,7 +1047,7 @@
                 >→</span
               >
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </section>
@@ -1127,7 +1062,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <!-- Left: Image & Mission Quote -->
-          <div class="lg:col-span-5 relative">
+          <div data-aos="fade-right" data-aos-duration="900" class="lg:col-span-5 relative">
             <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
               <img
                 alt="Professional and warm international education advisors consulting with a student and family in a modern bright office"
@@ -1156,6 +1091,7 @@
           </div>
           <!-- Right: Narrative & 6 Values -->
           <div class="lg:col-span-7">
+            <div data-aos="fade-up">
             <span
               class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
             >
@@ -1172,21 +1108,22 @@
               barriers, ensure verified institutional representation, and deliver ethical admissions
               guidance.
             </p>
+            </div>
             <!-- 6 Core Values Grid -->
             <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div data-aos="fade-up" class="bg-white p-4 rounded-xl border border-slate-200">
                 <span class="text-brand-royal font-bold text-base block mb-1">01. Integrity</span>
                 <p class="text-xs text-slate-500">
                   Uncompromising honesty and ethical compliance in every recommendation.
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div data-aos="fade-up" class="bg-white p-4 rounded-xl border border-slate-200">
                 <span class="text-brand-royal font-bold text-base block mb-1">02. Excellence</span>
                 <p class="text-xs text-slate-500">
                   Rigorous document curation and top-ranked institutional placement standards.
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div data-aos="fade-up" class="bg-white p-4 rounded-xl border border-slate-200">
                 <span class="text-brand-royal font-bold text-base block mb-1"
                   >03. Client Centred</span
                 >
@@ -1194,19 +1131,19 @@
                   Every student receives personalized roadmap options tailored to their profile.
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div data-aos="fade-up" class="bg-white p-4 rounded-xl border border-slate-200">
                 <span class="text-brand-royal font-bold text-base block mb-1">04. Empowerment</span>
                 <p class="text-xs text-slate-500">
                   Equipping applicants with critical decision-making insights and confidence.
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div data-aos="fade-up" class="bg-white p-4 rounded-xl border border-slate-200">
                 <span class="text-brand-royal font-bold text-base block mb-1">05. Inclusivity</span>
                 <p class="text-xs text-slate-500">
                   Democratizing access to international study for learners worldwide.
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <div data-aos="fade-up" class="bg-white p-4 rounded-xl border border-slate-200">
                 <span class="text-brand-royal font-bold text-base block mb-1"
                   >06. Accountability</span
                 >
@@ -1229,7 +1166,7 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-16">
           <span
             class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
           >
@@ -1244,7 +1181,7 @@
         </div>
 
         <!-- Spotlight Founder Card -->
-        <div
+        <div data-aos="fade-up" data-aos-duration="900"><div
           class="max-w-5xl mx-auto mb-14 bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 relative overflow-hidden group"
         >
           <div
@@ -1339,13 +1276,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </div></div>
 
         <!-- 3-Column Team Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Team Member 1: Sarah Jenkins -->
-          <div
-            class="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full bg-white rounded-3xl p-7 border border-slate-200/90 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
           >
             <div>
               <div
@@ -1383,11 +1320,11 @@
               </button>
               <span class="text-[11px] text-slate-400 font-medium">Russell Group</span>
             </div>
-          </div>
+          </div></div>
 
           <!-- Team Member 2: Marcus Adebayo -->
-          <div
-            class="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full bg-white rounded-3xl p-7 border border-slate-200/90 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
           >
             <div>
               <div
@@ -1425,11 +1362,11 @@
               </button>
               <span class="text-[11px] text-slate-400 font-medium">US &amp; Canada</span>
             </div>
-          </div>
+          </div></div>
 
           <!-- Team Member 3: Elena Rostova -->
-          <div
-            class="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+          <div data-aos="fade-up" class="h-full"><div
+            class="h-full bg-white rounded-3xl p-7 border border-slate-200/90 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
           >
             <div>
               <div
@@ -1467,7 +1404,7 @@
               </button>
               <span class="text-[11px] text-slate-400 font-medium">Compliance</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </section>
@@ -1482,18 +1419,18 @@
         class="absolute inset-0 opacity-10 bg-[radial-gradient(#1F5FA8_1px,transparent_1px)] [background-size:16px_16px]"
       ></div>
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <span
+        <span data-aos="fade-down"
           class="inline-block px-3.5 py-1 mb-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-royal/20 text-blue-200 border border-brand-royal/30"
           >Student Resources, Guides &amp; FAQs</span
         >
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+        <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
           Empowering Your Global Education Journey
         </h2>
-        <p class="mt-4 text-slate-300 text-base max-w-2xl mx-auto leading-relaxed">
+        <p data-aos="fade-up" class="mt-4 text-slate-300 text-base max-w-2xl mx-auto leading-relaxed">
           Access comprehensive downloadables, visa guidelines, application checklists, and verified
           answers to your most pressing study abroad questions.
         </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <div data-aos="fade-up" class="mt-8 flex flex-wrap justify-center gap-4">
           <a
             class="px-8 py-3.5 rounded-xl text-white bg-brand-royal hover:bg-blue-600 transition-all duration-200 shadow-lg flex items-center group"
             href="#faq-section"
@@ -1530,7 +1467,7 @@
       data-purpose="gallery-section"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
+        <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-14">
           <span
             class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
           >
@@ -1547,7 +1484,7 @@
         <!-- Visual Photo Grid (Edge-to-edge photography with sleek hover overlay) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Item 1: NZ -->
-          <div
+          <div data-aos="zoom-in"><div
             class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-subtle hover:shadow-card-hover transition-all duration-300"
             onclick="
               openPhotoLightbox(
@@ -1594,10 +1531,10 @@
                 Centuries of academic excellence and collegiate tradition.
               </p>
             </div>
-          </div>
+          </div></div>
 
           <!-- Item 2: USA -->
-          <div
+          <div data-aos="zoom-in"><div
             class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-subtle hover:shadow-card-hover transition-all duration-300"
             onclick="
               openPhotoLightbox(
@@ -1644,10 +1581,10 @@
                 Premier research facilities, innovation centers, and vibrant grounds.
               </p>
             </div>
-          </div>
+          </div></div>
 
           <!-- Item 3: Australia -->
-          <div
+          <div data-aos="zoom-in"><div
             class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-subtle hover:shadow-card-hover transition-all duration-300"
             onclick="
               openPhotoLightbox(
@@ -1694,10 +1631,10 @@
                 Grand historic collegiate landmarks and welcoming student communities.
               </p>
             </div>
-          </div>
+          </div></div>
 
           <!-- Item 5: Consultation -->
-          <div
+          <div data-aos="zoom-in"><div
             class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-subtle hover:shadow-card-hover transition-all duration-300"
             onclick="
               openPhotoLightbox(
@@ -1744,10 +1681,10 @@
                 Personalized academic profiling, prospectus review, and family support.
               </p>
             </div>
-          </div>
+          </div></div>
 
           <!-- Item 6: Global Milestone -->
-          <div
+          <div data-aos="zoom-in"><div
             class="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-subtle hover:shadow-card-hover transition-all duration-300"
             onclick="
               openPhotoLightbox(
@@ -1794,7 +1731,7 @@
                 Celebrating milestone arrivals and starting higher education overseas.
               </p>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </section>
@@ -1803,7 +1740,7 @@
     <!-- BEGIN: StudentSuccessStories -->
     <section class="py-20 bg-white" data-purpose="credibility-section">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
+        <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-14">
           <h2 class="mt-2 text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
             Student Success Stories &amp; Standards
           </h2>
@@ -1815,7 +1752,7 @@
         <!-- Testimonial / Success Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <!-- Story 1 -->
-          <div
+          <div data-aos="fade-up"
             class="p-8 rounded-2xl bg-brand-ice border border-slate-200 shadow-sm flex flex-col justify-between"
           >
             <div>
@@ -1844,7 +1781,7 @@
             </div>
           </div>
           <!-- Story 2 -->
-          <div
+          <div data-aos="fade-up"
             class="p-8 rounded-2xl bg-brand-ice border border-slate-200 shadow-sm flex flex-col justify-between"
           >
             <div>
@@ -1875,25 +1812,25 @@
         </div>
         <!-- Professional Standards / Trust Strip -->
         <div class="border-t border-slate-200 pt-10">
-          <p class="text-center text-xs font-bold uppercase tracking-wider text-slate-500 mb-6">
+          <p data-aos="fade-up" class="text-center text-xs font-bold uppercase tracking-wider text-slate-500 mb-6">
             Admissions Counseling Based On Recognized Best Practices
           </p>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
+            <div data-aos="fade-up" class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
               <span class="font-extrabold text-brand-navy text-sm block">British Council</span>
               <span class="text-[11px] text-slate-500">Education Agent Training Standards</span>
             </div>
-            <div class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
+            <div data-aos="fade-up" class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
               <span class="font-extrabold text-brand-navy text-sm block">UCAS Registered</span>
               <span class="text-[11px] text-slate-500">Official Admissions Center Protocols</span>
             </div>
-            <div class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
+            <div data-aos="fade-up" class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
               <span class="font-extrabold text-brand-navy text-sm block">PIER Qualified</span>
               <span class="text-[11px] text-slate-500"
                 >Australian Education Qualified Counselor</span
               >
             </div>
-            <div class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
+            <div data-aos="fade-up" class="p-4 rounded-xl border border-slate-100 bg-brand-tint/40">
               <span class="font-extrabold text-brand-navy text-sm block">ICEF Trained</span>
               <span class="text-[11px] text-slate-500">International Quality Agency Framework</span>
             </div>
@@ -1908,7 +1845,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <!-- Contact Channel Info Column -->
-          <div class="lg:col-span-5 space-y-6">
+          <div data-aos="fade-right" data-aos-duration="900" class="lg:col-span-5 space-y-6">
             <span
               class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
             >
@@ -1996,7 +1933,7 @@
             </div>
           </div>
           <!-- Consultation Form Column -->
-          <div
+          <div data-aos="fade-up" data-aos-duration="900"
             class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-subtle border border-slate-200"
           >
             <form
@@ -2132,7 +2069,7 @@
       id="faq-section"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14">
+        <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-14">
           <span
             class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
             >Advisory Knowledge Base &amp; Downloads</span
@@ -2146,7 +2083,7 @@
           </p>
         </div>
         <div class="mb-16">
-          <div
+          <div data-aos="fade-up"
             class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-200"
           >
             <div class="flex items-center space-x-2">
@@ -2160,8 +2097,8 @@
             >
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div
-              class="bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
+            <div data-aos="fade-up" class="h-full"><div
+              class="h-full bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
             >
               <div class="space-y-3">
                 <div
@@ -2205,9 +2142,9 @@
                   Download PDF Guide
                 </button>
               </div>
-            </div>
-            <div
-              class="bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
+            </div></div>
+            <div data-aos="fade-up" class="h-full"><div
+              class="h-full bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
             >
               <div class="space-y-3">
                 <div
@@ -2251,9 +2188,9 @@
                   Download Checklist
                 </button>
               </div>
-            </div>
-            <div
-              class="bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
+            </div></div>
+            <div data-aos="fade-up" class="h-full"><div
+              class="h-full bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
             >
               <div class="space-y-3">
                 <div
@@ -2303,9 +2240,9 @@
                   Access Toolkit
                 </button>
               </div>
-            </div>
-            <div
-              class="bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
+            </div></div>
+            <div data-aos="fade-up" class="h-full"><div
+              class="h-full bg-slate-50 border border-slate-200/90 rounded-2xl p-6 flex flex-col justify-between hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
             >
               <div class="space-y-3">
                 <div
@@ -2349,11 +2286,11 @@
                   Download Handbook
                 </button>
               </div>
-            </div>
+            </div></div>
           </div>
         </div>
         <div class="pt-10 border-t border-slate-200">
-          <div class="text-center max-w-2xl mx-auto mb-10">
+          <div data-aos="fade-up" class="text-center max-w-2xl mx-auto mb-10">
             <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
               Frequently Asked Questions
             </h3>
@@ -2363,7 +2300,7 @@
             </p>
           </div>
           <div class="space-y-4 max-w-4xl mx-auto">
-            <details
+            <div data-aos="fade-up"><details
               class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-6 transition-all duration-200 shadow-sm open:bg-white open:shadow-subtle open:border-brand-royal/30"
             >
               <summary
@@ -2391,8 +2328,8 @@
                 Australia—from initial academic profiling and course selection to certified document
                 submissions and final unconditional offers.
               </div>
-            </details>
-            <details
+            </details></div>
+            <div data-aos="fade-up"><details
               class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-6 transition-all duration-200 shadow-sm open:bg-white open:shadow-subtle open:border-brand-royal/30"
             >
             
@@ -2422,8 +2359,8 @@
                 48 hours to create a tailored timeline, ensuring that applications are completed 4
                 to 8 months ahead of departure.
               </div>
-            </details>
-            <details
+            </details></div>
+            <div data-aos="fade-up"><details
               class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-6 transition-all duration-200 shadow-sm open:bg-white open:shadow-subtle open:border-brand-royal/30"
             >
               <summary
@@ -2450,8 +2387,8 @@
                 CAS and COE verification, proof-of-funds analysis, health surcharge guidance, and
                 mock embassy interview preparation to maximize visa approval confidence.
               </div>
-            </details>
-            <details
+            </details></div>
+            <div data-aos="fade-up"><details
               class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-6 transition-all duration-200 shadow-sm open:bg-white open:shadow-subtle open:border-brand-royal/30"
             >
               <summary
@@ -2478,8 +2415,8 @@
                 language proficiency test scores (such as IELTS, TOEFL, or PTE, if available), a
                 current CV, and your passport identification page.
               </div>
-            </details>
-            <details
+            </details></div>
+            <div data-aos="fade-up"><details
               class="group bg-slate-50 border border-slate-200/90 rounded-2xl p-5 sm:p-6 transition-all duration-200 shadow-sm open:bg-white open:shadow-subtle open:border-brand-royal/30"
             >
               <summary
@@ -2509,10 +2446,10 @@
                   >+44 7495 359904</a
                 >) for prompt assessment within 24 to 48 hours.
               </div>
-            </details>
+            </details></div>
           </div>
         </div>
-        <div
+        <div data-aos="zoom-in"
           class="mt-12 text-center p-6 rounded-2xl bg-brand-ice border border-slate-200 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div class="text-left">
@@ -2540,7 +2477,7 @@
       data-purpose="site-footer"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
           class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-slate-800"
         >
           <!-- Brand info -->
@@ -2597,7 +2534,7 @@
         </div>
 
         <!-- Bottom row with copyright and minimal legal links -->
-        <div
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
           class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4"
         >
           <p class="">© 2025 Education Plus ISR. All rights reserved.</p>
@@ -3802,6 +3739,11 @@
           closeMobileNav();
         }
       });
+    </script>
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({});    
     </script>
   </body>
 </html>
