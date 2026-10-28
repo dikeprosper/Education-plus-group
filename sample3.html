@@ -5,7 +5,107 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Education Plus ISR | Opening Doors. Creating Global Opportunities.</title>
     <!-- Tailwind Custom Configuration -->
-    <link rel="stylesheet" href="output.css">
+    <!-- <link rel="stylesheet" href="output.css"> -->
+
+
+<!-- Tailwind CSS v3 with Forms & Container-Queries Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Custom Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0b2545",
+                navy: "#0059b3",
+                navyDark: "#0059b3",
+                orange: "#e87807",
+                darkOrange: "#ca6704",
+                royal: "#1F5FA8",
+                royalLight: "#2575D0",
+                ice: "#F4F7FB",
+                tint: "#EEF4FA",
+                border: "#E2E8F0",
+              },
+              secondary: "#545f74",
+              "surface-container-high": "#e8e7ec",
+              "secondary-container": "#d5e0f9",
+              "primary-container": "#002a59",
+              "primary-fixed": "#d6e3ff",
+              "tertiary-container": "#4d1c01",
+              "on-primary-fixed": "#001b3d",
+              "on-secondary-container": "#586378",
+              primary: "#001634",
+              "on-primary-container": "#7593c8",
+              "on-secondary-fixed-variant": "#3c475b",
+              "surface-bright": "#faf9fd",
+              "tertiary-fixed": "#ffdbcc",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              "on-background": "#1a1c1f",
+              "on-secondary-fixed": "#111c2e",
+              "on-surface": "#1a1c1f",
+              "on-secondary": "#ffffff",
+              background: "#faf9fd",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#a9c7ff",
+              "on-tertiary-container": "#cb805b",
+              "inverse-surface": "#2f3034",
+              outline: "#747780",
+              surface: "#faf9fd",
+              "primary-fixed-dim": "#a9c7ff",
+              "surface-container-highest": "#e3e2e7",
+              "surface-dim": "#dad9de",
+              "on-tertiary-fixed-variant": "#703718",
+              "surface-variant": "#e3e2e7",
+              "surface-container": "#eeedf2",
+              "on-surface-variant": "#43474f",
+              "surface-tint": "#405f90",
+              "on-tertiary": "#ffffff",
+              "outline-variant": "#c4c6d0",
+              "secondary-fixed-dim": "#bcc7df",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed": "#351000",
+              tertiary: "#2d0d00",
+              "secondary-fixed": "#d8e3fc",
+              "inverse-on-surface": "#f1f0f5",
+              "on-error-container": "#93000a",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#274777",
+              "surface-container-low": "#f4f3f8",
+              "tertiary-fixed-dim": "#ffb693",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+              headline: ["Plus Jakarta Sans"],
+              display: ["Plus Jakarta Sans"],
+              body: ["Plus Jakarta Sans"],
+              label: ["Plus Jakarta Sans"],
+            },
+            boxShadow: {
+              subtle: "0 4px 20px -2px rgba(18, 55, 107, 0.06)",
+              "card-hover": "0 12px 30px -4px rgba(18, 55, 107, 0.12)",
+            },
+            fontSize: {},
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Custom Styles: Typography, Flags & Accents -->
     <style data-purpose="base-styling">
@@ -106,7 +206,7 @@
       
       #destinations {
         background-image:
-          linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
           url("./image/bg.webp");
         background-size: cover;
         background-position: top center;
@@ -128,22 +228,6 @@
     />
     <!-- AOS (Animate On Scroll) -->
     <link href="./aos.css" rel="stylesheet" />
-    <style data-purpose="aos-safety">
-      /* Clip anything that slides in so it can never widen the page */
-      section,
-      footer {
-        overflow-x: clip;
-      }
-      /* If JS is off, never leave content hidden */
-    </style>
-    <noscript>
-      <style>
-        [data-aos] {
-          opacity: 1 !important;
-          transform: none !important;
-        }
-      </style>
-    </noscript>
   </head>
 
   <body class="antialiased selection:bg-brand-royal selection:text-white">
@@ -220,21 +304,22 @@
           <!-- Brand Logo -->
           <a class="flex items-center space-x-3 group" href="#">
             <div
-              class="w-15 h-12 rounded-xl bg-white p-1 flex items-center justify-center shrink-0 border-slate-200 group-hover:scale-105 transition-transform duration-200"
+              class="w-8 h-17 rounded-xl bg-white flex items-center justify-center shrink-0 border-slate-200 group-hover:scale-105 transition-transform duration-200"
             >
               <img loading="lazy"
                 alt="Education Plus ISR Logo"
                 class="w-full h-full object-contain rounded-lg"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkq5c6LhLDN7X04uGRlZEUnsGUDcLI2dcPXKRb4vF866X1Y9C_FfIUNj3jKahAsBm6QVzRp0xCpEElEeIe9XrFknKv5UoZgN4yAzqJyv_AF2z8PlrWafrMnR9Ft-583a_AHxFBZvlzM9MhoWUI_jOj53l-sCC7gq5WR8iYDZxeLxhBCPRS-LyOZ1OLirD9eqkDuSV5pOWZeCPkqIjkwWLdjUL2k-CfxfVUUdYT7Pmw1LTJmfPMoBC6xFF5PqkISIMRhw"
+                src="./image/logo.webp"
               />
             </div>
             <div class="flex flex-col">
               <span
-                class="text-[18px] tracking-tight text-brand-navy group-hover:text-brand-royal transition-colors"
+                class="text-[22px] tracking-tight font-bold text-brand-navy group-hover:text-brand-royal transition-colors"
               >
                 Education Plus ISR
               </span>
-              <span class="text-[9px] tracking-widest text-slate-500 leading-tight"
+              <span class="text-[11px] tracking-widest text-slate-500 leading-tight"
+              style="margin-top: -5px;"
                 >Opening Doors. Creating Global<br />Opportunities.</span
               >
             </div>
@@ -390,7 +475,7 @@
             href="https://wa.me/447495359904"
             rel="noopener noreferrer"
             target="_blank"
-            >💬 Chat on WhatsApp</a
+            >Chat on WhatsApp</a
           >
         </div>
       </div>
@@ -446,16 +531,11 @@
                 </svg>
               </a>
               <a
-                class="inline-flex items-center px-6 py-2.5 rounded-md text-brand-navy bg-white hover:bg-brand-tint border border-slate-300 transition-all duration-200 shadow-sm text-sm"
+                class="inline-flex items-center px-4 py-2.5 rounded-md text-brand-navy bg-white hover:bg-brand-tint border border-slate-300 transition-all duration-200 shadow-sm text-sm"
                 href="https://wa.me/447495359904"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <svg class="w-5 h-5 mr-2 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path
-                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 2.008.815 3.149.815 3.18 0 5.767-2.587 5.767-5.766.001-3.18-2.585-5.767-5.767-5.767zm3.391 8.163c-.144.405-.837.774-1.17.822-.312.043-.683.078-2.072-.497-1.782-.738-2.92-2.55-3.009-2.668-.088-.119-.724-.963-.724-1.836 0-.874.457-1.303.621-1.48.165-.176.36-.22.48-.22.12 0 .241.002.346.007.11.005.258-.042.404.308.15.361.512 1.246.557 1.337.045.09.075.197.015.316-.06.12-.09.195-.18.299-.09.105-.189.233-.27.314-.09.09-.185.188-.079.37.106.182.471.777 1.011 1.258.696.62 1.283.812 1.464.902.181.09.286.075.391-.045.105-.12.45-.526.57-.706.12-.18.24-.15.405-.09.165.06 1.05.495 1.23.585.18.09.3.135.345.21.045.075.045.435-.099.84z"
-                  ></path>
-                </svg>
                 Chat on WhatsApp&nbsp;</a
               >
             </div>
@@ -482,21 +562,6 @@
                 >
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2.5"
-                    ></path>
-                  </svg>
-                </span>
-                <span class="">Transparent Process</span>
-              </div>
-              <div class="flex items-center space-x-2 text-slate-700 font-semibold text-xs">
-                <span
-                  class="w-6 h-6 rounded-full bg-brand-tint text-brand-royal flex items-center justify-center shrink-0"
-                >
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
                       d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -510,7 +575,7 @@
           </div>
           <!-- Right Visual Showcase with Floating Card -->
           <div class="lg:col-span-5 relative">
-            <div data-aos="zoom-in" data-aos-duration="1000" class="relative mx-auto max-w-md lg:max-w-none">
+            <div data-aos="zoom-in" class="relative mx-auto max-w-md lg:max-w-none">
               <div
                 class="absolute -top-6 -left-6 w-72 h-72 bg-brand-royal/10 rounded-full blur-3xl"
               ></div>
@@ -605,181 +670,235 @@
             Dual Specialized Divisions
           </span>
           <h2 class="mt-1 text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-            Services we offer
+            What we offer
           </h2>
           <p class="mt-3 text-slate-600 text-sm">
             Education Plus ISR operates tailored recruitment and advisory divisions designed to
             eliminate ambiguity and streamline your path to overseas success.
           </p>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <!-- Card 1: ISR (Flagship) -->
-          <div data-aos="fade-up" class="h-full"><div
-            class="h-full bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 cursor-pointer"
-            onclick="openServiceModal('isr')"
-            role="button"
-            tabindex="0"
-          >
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-6">
-                <span
-                  class="bg-orange-500 text-white text-xs px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm"
-                >
-                  Flagship
-                </span>
-                <div
-                  class="w-12 h-12 rounded-2xl bg-brand-tint text-brand-royal flex items-center justify-center font-bold text-xl shrink-0 group-hover:scale-105 transition-transform"
-                >
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <h3
-                class="text-[21px] font-extrabold text-brand-navy mb-3 group-hover:text-brand-royal transition-colors leading-snug"
-              >
-                International Student Recruitment (ISR)
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-                Guidance for students applying to study in the United Kingdom, United States, Canada
-                and Australia.
-              </p>
-              <ul class="space-y-3 mb-6 text-sm text-slate-700">
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Course and institution selection guidance</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Assessment of academic background and study objectives</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">University and college applications</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Application document guidance</span>
-                </li>
-              </ul>
-              <div class="mb-8 flex items-center gap-2">
-                <span
-                  class="inline-flex items-center text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-tint text-brand-navy border border-slate-200"
-                >
-                  +3 more services
-                </span>
-              </div>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <button
-                type="button"
-                class="inline-flex items-center text-sm font-bold text-white bg-brand-navy hover:bg-brand-navyDark px-5 py-2.5 rounded-xl transition-all shadow-md group-hover:shadow-lg"
-              >
-                Learn More
-                <svg
-                  class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  ></path>
-                </svg>
-              </button>
-              <span class="text-xs text-slate-400 font-medium hidden sm:inline"
-                >Admissions &amp; Placement</span
-              >
-            </div>
-          </div></div>
 
-          <!-- Card 2: Visa Support -->
-          <div data-aos="fade-up" class="h-full"><div
-            class="h-full bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-1 cursor-pointer"
-            onclick="openServiceModal('visa')"
-            role="button"
-            tabindex="0"
-          >
-            <div>
-              <div class="flex items-center justify-between gap-4 mb-6">
-                <span
-                  class="bg-brand-navy text-white text-xs px-3.5 py-1 rounded-full uppercase tracking-wider shadow-sm"
-                >
-                  Advisory
-                </span>
-                <div
-                  class="w-12 h-12 rounded-2xl bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-xl shrink-0 group-hover:scale-105 transition-transform"
-                >
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                    ></path>
-                  </svg>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <!-- International Student Recruitment (ISR) -->
+          <div data-aos="fade-up">
+            <div class="flex flex-col gap-4">
+              <div
+                class="group bg-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                onclick="openServiceModal('isr')"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openServiceModal('isr')}"
+                role="button"
+                tabindex="0"
+              >
+                <div class="w-full sm:w-36 h-48 sm:h-36 shrink-0 overflow-hidden rounded-3xl bg-brand-tint">
+                  <img
+                    src="./image/isr.webp"
+                    alt="International student planning to study abroad"
+                    loading="lazy"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="min-w-0">
+                  <h3
+                    class="text-1xl sm:text-[23px] font-extrabold text-brand-navy leading-tight group-hover:text-brand-royal transition-colors"
+                  >
+                    International Student Recruitment (ISR)
+                  </h3>
+                  <p class="mt-3 text-slate-600 text-[15px] leading-relaxed">
+                    Guidance for students applying to study in the United Kingdom, United States, Canada and Australia.
+                  </p>
+                  <span
+                    class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-royal group-hover:gap-3 transition-all duration-300"
+                  >
+                    Learn more
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+                    </svg>
+                  </span>
                 </div>
               </div>
-              <h3
-                class="text-[21px] font-extrabold text-brand-navy mb-3 group-hover:text-brand-royal transition-colors leading-snug"
-              >
-                Visa Support Services
-              </h3>
-              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-                Guidance for tourist, family and work visas.
-              </p>
-              <ul class="space-y-3 mb-8 text-sm text-slate-700">
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Tourist and visit visas</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Family visit visas</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Work visa guidance</span>
-                </li>
-                <li class="flex items-start">
-                  <span class="text-brand-royal mr-2.5 font-bold shrink-0 mt-0.5">✓</span>
-                  <span class="">Initial visa assessment and advice on next steps</span>
-                </li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <button
-                type="button"
-                class="inline-flex items-center text-sm font-bold text-brand-navy bg-brand-tint hover:bg-brand-royal hover:text-white px-5 py-2.5 rounded-xl transition-all shadow-sm group-hover:shadow-md"
-              >
-                Learn More
-                <svg
-                  class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+
+              <!-- Service boxes -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
                 >
-                  <path
-                    d="M9 5l7 7-7 7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  ></path>
-                </svg>
-              </button>
-              <span class="text-xs text-slate-400 font-medium hidden sm:inline"
-                >Checklists &amp; Vetting</span
-              >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >1</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Course and Institution Selection Guidance</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >2</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Assessment of Academic Background and Study Objectives</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >3</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">University and College Applications</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >4</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Application Document Guidance</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >5</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">English Language Testing Application Support</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >6</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Student Visa Application Guidance and Document Preparation</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('isr')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300 sm:col-span-2"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >7</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Support Throughout the Admissions and Visa Application Process</span>
+                </button>
+              </div>
             </div>
-          </div></div>
+          </div>
+
+          <!-- Visa Support Services -->
+          <div data-aos="fade-up">
+            <div class="flex flex-col gap-4">
+              <div
+                class="group bg-white rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 shadow-subtle hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                onclick="openServiceModal('visa')"
+                onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openServiceModal('visa')}"
+                role="button"
+                tabindex="0"
+              >
+                <div class="w-full sm:w-36 h-48 sm:h-36 shrink-0 overflow-hidden rounded-3xl bg-brand-tint">
+                  <img
+                    src="./image/gallery/consultation.jpg"
+                    alt="Advisors consulting a student and family"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="min-w-0">
+                  <h3
+                    class="text-1xl sm:text-[23px] font-extrabold text-brand-navy leading-tight group-hover:text-brand-royal transition-colors"
+                  >
+                    Visa Support Services
+                  </h3>
+                  <p class="mt-3 text-slate-600 text-[15px] leading-relaxed">
+                    Guidance for tourist, family and work visas, with an initial assessment and advice on your next steps.
+                  </p>
+                  <span
+                    class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand-royal group-hover:gap-3 transition-all duration-300"
+                  >
+                    Learn more
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Service boxes -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('visa')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >1</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Tourist and Visit Visas</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('visa')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >2</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Family Visit Visas</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('visa')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >3</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Work Visa Guidance</span>
+                </button>
+                <button
+                  data-aos="fade-up"
+                  type="button"
+                  onclick="openServiceModal('visa')"
+                  class="group/box flex items-center gap-3 text-left bg-white rounded-2xl border border-slate-200/90 p-4 shadow-subtle hover:border-brand-royal hover:shadow-card-hover transition-all duration-300"
+                >
+                  <span
+                    class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0 group-hover/box:bg-brand-royal group-hover/box:text-white transition-colors"
+                    >4</span
+                  >
+                  <span class="text-sm font-semibold text-brand-navy leading-snug">Initial Visa Assessment and Advice on Next Steps</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -790,9 +909,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div data-aos="fade-up" class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span class="text-brand-navy font-bold text-[9px] uppercase tracking-widest">
-              Key Global Hubs
-            </span>
+
             <h2 class="mt-1 text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
               Study in Your Dream Destination
             </h2>
@@ -839,26 +956,9 @@
                   <span class="text-[11px] font-bold text-brand-navy">United Kingdom</span>
                 </div>
               </div>
-              <div class="p-5">
-                <h3
-                  class="text-lg font-bold text-brand-navy group-hover:text-brand-royal transition-colors"
-                >
-                  United Kingdom
-                </h3>
-                <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >Undergraduate</span
-                  >
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >Postgraduate</span
-                  >
-                </div>
-              </div>
             </div>
             <div
-              class="p-5 pt-0 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
+              class="p-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
             >
               <button
                 class="text-left font-bold text-brand-royal hover:underline"
@@ -896,26 +996,10 @@
                   <span class="text-[11px] font-bold text-brand-navy">United States</span>
                 </div>
               </div>
-              <div class="p-5">
-                <h3
-                  class="text-lg font-bold text-brand-navy group-hover:text-brand-royal transition-colors"
-                >
-                  United States
-                </h3>
-                <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >STEM Degrees</span
-                  >
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >Transfer Credits</span
-                  >
-                </div>
-              </div>
+
             </div>
             <div
-              class="p-5 pt-0 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
+              class="p-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
             >
               <button
                 class="text-left font-bold text-brand-royal hover:underline"
@@ -953,26 +1037,10 @@
                   <span class="text-[11px] font-bold text-brand-navy">Canada</span>
                 </div>
               </div>
-              <div class="p-5">
-                <h3
-                  class="text-lg font-bold text-brand-navy group-hover:text-brand-royal transition-colors"
-                >
-                  Canada
-                </h3>
-                <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >DLI Colleges</span
-                  >
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >PGWP Eligible</span
-                  >
-                </div>
-              </div>
+              
             </div>
             <div
-              class="p-5 pt-0 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
+              class="p-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
             >
               <button
                 class="text-left font-bold text-brand-royal hover:underline"
@@ -1010,27 +1078,9 @@
                   <span class="text-[11px] font-bold text-brand-navy">Australia</span>
                 </div>
               </div>
-              <div class="p-5">
-                <h3
-                  class="text-lg font-bold text-brand-navy group-hover:text-brand-royal transition-colors"
-                >
-                  Australia
-                </h3>
-
-                <div class="mt-4 flex flex-wrap gap-1.5">
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >Go8 Campuses</span
-                  >
-                  <span
-                    class="text-[11px] bg-brand-ice text-brand-navy px-2 py-0.5 rounded font-medium"
-                    >Subclass 500</span
-                  >
-                </div>
-              </div>
             </div>
             <div
-              class="p-5 pt-0 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
+              class="p-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-brand-royal"
             >
               <button
                 class="text-left font-bold text-brand-royal hover:underline"
@@ -1062,7 +1112,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <!-- Left: Image & Mission Quote -->
-          <div data-aos="fade-right" data-aos-duration="900" class="lg:col-span-5 relative">
+          <div data-aos="fade-right" class="lg:col-span-5 relative">
             <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
               <img loading="lazy"
                 alt="Professional and warm international education advisors consulting with a student and family in a modern bright office"
@@ -1167,11 +1217,6 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-16">
-          <span
-            class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
-          >
-            Executive Directorate
-          </span>
           <h2 class="mt-1 text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
             Meet Our Team
           </h2>
@@ -1181,7 +1226,7 @@
         </div>
 
         <!-- Spotlight Founder Card -->
-        <div data-aos="fade-up" data-aos-duration="900"><div
+        <div data-aos="fade-up"><div
           class="max-w-5xl mx-auto mb-14 bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-subtle hover:shadow-card-hover transition-all duration-300 relative overflow-hidden group"
         >
           <div
@@ -1210,14 +1255,6 @@
 
             <!-- Founder Details -->
             <div class="flex-1 text-center md:text-left space-y-4">
-              <div class="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
-                <span
-                  class="bg-gradient-to-r from-orange-500 to-amber-600 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow-xs"
-                >
-                  Executive Leadership
-                </span>
-                <span class="text-xs font-semibold text-slate-500">Education Plus ISR</span>
-              </div>
               <div>
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
                   David Chen
@@ -1464,17 +1501,12 @@
     <section
       class="py-20 bg-white border-t border-slate-200"
       id="gallery"
-      data-purpose="gallery-section"
-    >
+      data-purpose="gallery-section">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-14">
-          <span
-            class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
-          >
-            Visual Showcase
-          </span>
+
           <h2 class="mt-1 text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-            Gallery
+            Visual Showcase
           </h2>
           <p class="mt-3 text-slate-600 text-base">
             Moments from student journeys, historic campuses, and international advising.
@@ -1845,7 +1877,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <!-- Contact Channel Info Column -->
-          <div data-aos="fade-right" data-aos-duration="900" class="lg:col-span-5 space-y-6">
+          <div data-aos="fade-right" class="lg:col-span-5 space-y-6">
             <span
               class="text-brand-navy font-bold text-[9px] uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-navy/30"
             >
@@ -1933,7 +1965,7 @@
             </div>
           </div>
           <!-- Consultation Form Column -->
-          <div data-aos="fade-up" data-aos-duration="900"
+          <div data-aos="fade-up"
             class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-subtle border border-slate-200"
           >
             <form
@@ -2063,6 +2095,7 @@
       </div>
     </section>
     <!-- BEGIN: FAQSection -->
+     
     <section
       class="py-20 bg-white border-t border-slate-200 scroll-smooth"
       data-purpose="faq-section"
@@ -2481,7 +2514,7 @@
           class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8 border-b border-slate-800"
         >
           <!-- Brand info -->
-          <div class="flex items-center space-x-3 text-center md:text-left">
+          <div class="flex flex-col md:flex-row items-center space-x-3 text-center md:text-left">
             <div
               class="w-11 h-11 rounded-xl bg-white p-1.5 flex items-center justify-center shrink-0 shadow-md"
             >
@@ -2492,10 +2525,10 @@
               />
             </div>
             <div class="flex flex-col text-left">
-              <span class="text-lg font-extrabold text-white tracking-tight"
-                >EDUCATION PLUS ISR</span
+              <span class="text-xl text-center md:text-left font-extrabold text-white tracking-tight"
+                >Education Plus ISR</span
               >
-              <span class="text-[10px] uppercase font-bold tracking-widest text-blue-300"
+              <span class="text-[10px] text-center md:text-left uppercase font-bold tracking-widest text-blue-300"
                 >Opening Doors. Creating Global Opportunities.</span
               >
             </div>
@@ -2701,9 +2734,6 @@
                 class="text-base sm:text-lg font-bold text-white tracking-tight  gap-2">
                 <div id="lightbox-country-name" class="">United Kingdom</div>
               </h4>
-              <p class="text-xs text-slate-400" id="lightbox-country-sub">
-                Russell Group &amp; Top British Higher Education Institutions
-              </p>
             </div>
           </div>
           <div class="flex items-center space-x-3">
@@ -2796,10 +2826,7 @@
                 Inquire Admission
               </a>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed mb-3" id="lightbox-uni-desc">
-              World-renowned collegiate university offering unparalleled academic traditions,
-              world-leading research, and individualized tutorial teaching.
-            </p>
+
             <div
               class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2 border-t border-slate-700/60 text-[11px]"
             >
@@ -2807,12 +2834,6 @@
                 <span class="text-slate-400 block">Top Programs:</span>
                 <span class="font-semibold text-slate-200" id="lightbox-uni-programs"
                   >PPE, Computer Science, Law, MBA</span
-                >
-              </div>
-              <div>
-                <span class="text-slate-400 block">Upcoming Intakes:</span>
-                <span class="font-semibold text-slate-200" id="lightbox-uni-intake"
-                  >September / October 2025</span
                 >
               </div>
               
@@ -2884,35 +2905,22 @@
           universities: [
             {
               name: "Leeds University",
-              tag: "Russell Group",
-              rank: "Global Rank #1 (THE)",
               image:
               "image/universities/leeds.jpg",
-              desc: "World-renowned collegiate university offering unparalleled academic traditions, world-leading research, and individualized tutorial teaching.",
               programs: "PPE, Computer Science, Law, MBA",
-              intake: "September / October 2025",
               visa: "2-Year Graduate Visa",
             },
             {
               name: "Imperial College London",
-              tag: "Russell Group",
-              rank: "Global Rank #2 (QS)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuAkBiDukYy4acLyUcAQM0G7HwLqcwe0bGlfs9vM-qwHrkUlCUePmZImUYAQoWWQFpfYpdaFQ9JkntQh3cHQiO_azs3-HhBahnV6Jv5P1mx38lElH9Xq16pg0Gv4EIfLhOPLDkcQJhJtHx2wdQQtAPJ7xxJeK1lA4n1eUHfbtGNAt3bQb8jRg2ai-C4YOhfG0o5WSoyI8GRwrEIP6-ynVlB5JyQENe22Qgs2RLWW5a4cUNxe0wRGpcK4",
-              desc: "World-leading science, engineering, business, and medicine institution located in South Kensington at the heart of London.",
               programs: "Data Science, Biomedical, Finance",
-              intake: "October 2025",
               visa: "2-Year Graduate Visa",
             },
             {
               name: "University of Edinburgh",
-              tag: "Russell Group",
-              rank: "Global Rank #27 (QS)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuAkBiDukYy4acLyUcAQM0G7HwLqcwe0bGlfs9vM-qwHrkUlCUePmZImUYAQoWWQFpfYpdaFQ9JkntQh3cHQiO_azs3-HhBahnV6Jv5P1mx38lElH9Xq16pg0Gv4EIfLhOPLDkcQJhJtHx2wdQQtAPJ7xxJeK1lA4n1eUHfbtGNAt3bQb8jRg2ai-C4YOhfG0o5WSoyI8GRwrEIP6-ynVlB5JyQENe22Qgs2RLWW5a4cUNxe0wRGpcK4",
-              desc: "One of Britain's ancient universities with world-class faculty, historic Scottish campus, and extensive industry linkages.",
-              programs: "Informatics, AI, Humanities, Law",
-              intake: "September 2025",
               visa: "2-Year Graduate Visa",
             },
           ],
@@ -2924,35 +2932,23 @@
           universities: [
             {
               name: "Lipscomb University",
-              tag: "Ivy League",
-              rank: "Global Rank #4 (QS)",
               image:
                 "./image/universities/lipscomb.jpg",
-              desc: "Prestigious private Ivy League research university in Cambridge, Massachusetts, renowned for academic excellence, alumni network, and global leadership.",
               programs: "Business, Law, Medicine, CS",
-              intake: "Fall (August / Sept) 2025",
               visa: "3-Year STEM OPT Extension",
             },
             {
               name: "Columbia University",
-              tag: "Ivy League",
-              rank: "Global Rank #12 (US News)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuAEkvYUhx0JzqhOIkaM0x1ZqX3Wg-HetCNbURrFuRwQVE0fWQaJBV917zz36Bvc1jKwUaaedS4zw2Y9EB56ikAA81h5QHYXrPp4O5FiTF5iMptD0pCo6S8hVjTJDgEvbsZ4nqOBbxRMRoKyMMocIfI_187uyJ_xGHDCu4gip9axnpOqx-mhVp3LhL28QoKuL8rL6JdrBBqddPE-tCXF3Uxi18YT5r69NNQPf5RGaAo5ujfZTZm_-WKC",
-              desc: "Historic Ivy League institution in New York City offering exceptional graduate studies, Wall Street connections, and research funding.",
               programs: "Finance, Data Analytics, Engineering",
-              intake: "Fall 2025 / Spring 2026",
               visa: "3-Year STEM OPT Extension",
             },
             {
               name: "University of California, Los Angeles (UCLA)",
-              tag: "Public Ivy",
-              rank: "Top Public US University",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuAEkvYUhx0JzqhOIkaM0x1ZqX3Wg-HetCNbURrFuRwQVE0fWQaJBV917zz36Bvc1jKwUaaedS4zw2Y9EB56ikAA81h5QHYXrPp4O5FiTF5iMptD0pCo6S8hVjTJDgEvbsZ4nqOBbxRMRoKyMMocIfI_187uyJ_xGHDCu4gip9axnpOqx-mhVp3LhL28QoKuL8rL6JdrBBqddPE-tCXF3Uxi18YT5r69NNQPf5RGaAo5ujfZTZm_-WKC",
-              desc: "World-class public research powerhouse offering state-of-the-art facilities, entrepreneurial incubators, and vibrant campus life.",
               programs: "Business Economics, Engineering, Film",
-              intake: "Quarterly / Fall 2025",
               visa: "12-36 Months OPT Work Rights",
             },
           ],
@@ -2964,35 +2960,23 @@
           universities: [
             {
               name: "University of Winnipeg",
-              tag: "U15 Group",
-              rank: "Global Rank #21 (QS)",
               image:
                 "./image/universities/Winnipeg.jpg",
-              desc: "Canada's leading research institution situated in downtown Toronto, renowned for groundbreaking innovation, AI research, and diverse multicultural student body.",
               programs: "Computer Science, Rotman MBA, Engineering",
-              intake: "September 2025 / January 2026",
               visa: "Up to 3-Year PGWP",
             },
             {
               name: "McGill University",
-              tag: "U15 Group",
-              rank: "Global Rank #29 (QS)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuB0_5GJ1kknxv88Fg0rhu7AN70uBi17l7Jv2aipS-Mb0a219SchQ5NbPoSwbXdFVRQuPwngDHX5f9zJib8V6f9sjed_5c57S83KoO95Lk_1H2SOtEzAYemBWRAV2CugvOvU38OKFygU0xJNyKltn6Y4gK4nCiHHI3XC9tQC56MMWovHOer6mki8RZH_VKso4PgJ7MMZymjdkiZkK0dhpHGPzlWjY9-ikdJaO6EyC0GwgeADCHRDjt7F",
-              desc: "Prestigious Montreal-based university renowned for medical research, international student proportion, and high post-graduate employment rates.",
               programs: "Biomedical Sciences, Law, Management",
-              intake: "Fall 2025 Intake",
               visa: "Up to 3-Year PGWP",
             },
             {
               name: "University of British Columbia (UBC)",
-              tag: "U15 Group",
-              rank: "Global Rank #38 (QS)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuB0_5GJ1kknxv88Fg0rhu7AN70uBi17l7Jv2aipS-Mb0a219SchQ5NbPoSwbXdFVRQuPwngDHX5f9zJib8V6f9sjed_5c57S83KoO95Lk_1H2SOtEzAYemBWRAV2CugvOvU38OKFygU0xJNyKltn6Y4gK4nCiHHI3XC9tQC56MMWovHOer6mki8RZH_VKso4PgJ7MMZymjdkiZkK0dhpHGPzlWjY9-ikdJaO6EyC0GwgeADCHRDjt7F",
-              desc: "Stunning Pacific-coast campus offering premier sustainable sciences, engineering co-op programs, and strong Asian-Pacific commercial links.",
               programs: "Data Science, Forestry, Commerce",
-              intake: "September 2025",
               visa: "Up to 3-Year PGWP",
             },
           ],
@@ -3004,35 +2988,23 @@
           universities: [
             {
               name: "University of Sydney",
-              tag: "Group of Eight",
-              rank: "Global Rank #18 (QS)",
               image:
                 "./image/universities/sydney.jpg",
-              desc: "Australia's first university with iconic sandstone cloisters, vibrant campus life, and top employer reputation rankings worldwide.",
               programs: "Architecture, Business, IT, Medicine",
-              intake: "Semester 1 (Feb) & Semester 2 (July) 2025",
               visa: "Subclass 485 Post-Study Visa",
             },
             {
               name: "University of Melbourne",
-              tag: "Group of Eight",
-              rank: "Global Rank #13 (QS)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuBHbvuZ9tW26zqHUHRFbgQZmrOzySTliMBwsoasivyvh8pfcQRX2NyAAWglctMv9D94hzLZ2IyvIrEE1sDpHpYk3S9f5KHhnfHMOYQ36__Wj0_RBY61ama-W17wz6AGqcYB0MoNH54liQvImOdglxi7s-RO8jwfAjFlcn-XObTUwvBSaObDsL-p5o-YwF4PDDa8Er3gZHekH4D4lFnEX5Gjg2MCuNm1771QRtNKrYMcXLfE6omkzgw5",
-              desc: "Consistently rated Australia's top university, offering unique Melbourne Model flexible curriculums and high-impact international research centers.",
               programs: "Melbourne Business School, Engineering, Law",
-              intake: "February / July 2025",
               visa: "Subclass 485 Post-Study Visa",
             },
             {
               name: "Australian National University (ANU)",
-              tag: "Group of Eight",
-              rank: "Global Rank #30 (QS)",
               image:
                 "https://lh3.googleusercontent.com/aida-public/AB6AXuBHbvuZ9tW26zqHUHRFbgQZmrOzySTliMBwsoasivyvh8pfcQRX2NyAAWglctMv9D94hzLZ2IyvIrEE1sDpHpYk3S9f5KHhnfHMOYQ36__Wj0_RBY61ama-W17wz6AGqcYB0MoNH54liQvImOdglxi7s-RO8jwfAjFlcn-XObTUwvBSaObDsL-p5o-YwF4PDDa8Er3gZHekH4D4lFnEX5Gjg2MCuNm1771QRtNKrYMcXLfE6omkzgw5",
-              desc: "Australia's national research university situated in Canberra, boasting close ties to government policy, science centers, and premier global scholarships.",
               programs: "Public Policy, Cyber Security, Sciences",
-              intake: "Semester 1 (Feb) 2025",
               visa: "Regional & Extended Subclass 485",
             },
           ],
@@ -3050,7 +3022,6 @@
 
         document.getElementById("lightbox-flag").textContent = countryData.flag;
         document.getElementById("lightbox-country-name").textContent = countryData.country;
-        document.getElementById("lightbox-country-sub").textContent = countryData.sub;
         document.getElementById("lightbox-counter").textContent =
           `${currentUniIndex + 1} / ${countryData.universities.length}`;
 
@@ -3063,9 +3034,7 @@
         }, 120);
 
         document.getElementById("lightbox-uni-name").textContent = uni.name;
-        document.getElementById("lightbox-uni-desc").textContent = uni.desc;
         document.getElementById("lightbox-uni-programs").textContent = uni.programs;
-        document.getElementById("lightbox-uni-intake").textContent = uni.intake;
 
         // Update bottom country tabs active state
         document.querySelectorAll("[data-country]").forEach((btn) => {
@@ -3265,436 +3234,6 @@
         }
       });
     </script>
-
-    <!-- ISR Service Modal -->
-    <div
-      id="service-modal-isr"
-      class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="isr-modal-title"
-    >
-      <div
-        class="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col max-h-[92vh] overflow-hidden"
-      >
-        <!-- Fixed Header -->
-        <div
-          class="flex items-center justify-between px-6 py-5 border-b border-slate-200 bg-white shrink-0 z-10"
-        >
-          <div class="flex items-center space-x-3">
-            <div class="px-2">
-              <h3
-                id="isr-modal-title"
-                class="text-lg sm:text-xl font-bold text-brand-navy tracking-tight"
-              >
-                International Student Recruitment (ISR)
-              </h3>
-            </div>
-          </div>
-          <button
-            type="button"
-            onclick="closeServiceModal('isr')"
-            aria-label="Close modal"
-            class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M6 18L18 6M6 6l12 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              ></path>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Scrollable Middle Area -->
-        <div class="overflow-y-auto max-h-[65vh] p-6 space-y-6 text-slate-700">
-          <!-- Pill Tags Section -->
-          <div class="space-y-4 bg-brand-ice p-5 rounded-2xl border border-slate-200/80">
-            <div>
-              <p class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">
-                Study destinations:
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-700 shadow-sm"
-                  >🇬🇧 United Kingdom</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-700 shadow-sm"
-                  >🇺🇸 United States of America</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-700 shadow-sm"
-                  >🇨🇦 Canada</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-semibold text-slate-700 shadow-sm"
-                  >🇦🇺 Australia</span
-                >
-              </div>
-            </div>
-            <div>
-              <p class="text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">
-                Programmes we support:
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700 shadow-sm"
-                  >Foundation programmes</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700 shadow-sm"
-                  >A Levels</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700 shadow-sm"
-                  >International Baccalaureate (IB)</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700 shadow-sm"
-                  >Undergraduate degrees</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700 shadow-sm"
-                  >Top up degrees</span
-                >
-                <span
-                  class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-medium text-slate-700 shadow-sm"
-                  >Postgraduate degrees (including Master's degrees, MBAs and doctorates)</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- 7 Service Blocks -->
-          <div class="space-y-4">
-            <h4 class="text-sm font-bold text-brand-navy uppercase tracking-wider">
-              Core Admissions Services:
-            </h4>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                1
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">
-                  Course and Institution Selection Guidance
-                </p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Tailored shortlisting of courses, faculties, and universities aligned with your
-                  academic credentials, career ambitions, and budget parameters.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                2
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">
-                  Assessment of Academic Background and Study Objectives
-                </p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Detailed evaluation of prior qualifications, transcripts, and grading schemes
-                  against international equivalency frameworks.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                3
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">University and College Applications</p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Direct submission and management of admissions applications across institutional
-                  portals and centralized services (such as UCAS).
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                4
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">Application Document Guidance</p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Structuring and refinement assistance for Statements of Purpose (SOP), personal
-                  essays, CVs, and academic reference letters.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                5
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">
-                  English Language Testing Application Support
-                </p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Guidance on standardized test requirements (IELTS, TOEFL, PTE, Duolingo),
-                  institutional waiver criteria, and scheduling.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                6
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">
-                  Student Visa Application Guidance and Document Preparation
-                </p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Detailed review of CAS/I-20/COE issuance, certified financial evidence curation,
-                  and procedural interview readiness.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                7
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">
-                  Support Throughout the Admissions and Visa Application Process
-                </p>
-                <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">
-                  Continuous tracking, communication with university admissions officers,
-                  pre-departure orientation, and arrival preparations.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Statutory End Note -->
-          <div
-            class="p-4 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-600 leading-relaxed"
-          >
-            <span class="font-bold text-slate-700">Notice:</span> Visa decisions rest with the
-            relevant authorities and outcomes cannot be guaranteed.
-          </div>
-        </div>
-
-        <!-- Fixed Footer Bar -->
-        <div
-          class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0 z-10"
-        >
-          <div class="flex items-center text-xs font-semibold text-slate-600">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
-            We respond within 24 to 48 hours.
-          </div>
-          <div class="flex items-center gap-3 w-full sm:w-auto">
-            <a
-              href="https://wa.me/447495359904"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 sm:flex-initial inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold text-emerald-600 bg-white border border-emerald-300 hover:bg-emerald-50 transition-colors shadow-sm"
-            >
-              Chat on WhatsApp
-            </a>
-            <a
-              href="#contact"
-              onclick="closeServiceModal('isr')"
-              class="flex-1 sm:flex-initial inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-navy hover:bg-brand-navyDark transition-colors shadow-sm"
-            >
-              Book a Consultation
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Visa Support Service Modal -->
-    <div
-      id="service-modal-visa"
-      class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="visa-modal-title"
-    >
-      <div
-        class="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl border border-slate-200 flex flex-col max-h-[92vh] overflow-hidden"
-      >
-        <!-- Fixed Header -->
-        <div
-          class="flex items-center justify-between px-6 py-5 border-b border-slate-200 bg-white shrink-0 z-10"
-        >
-          <div class="flex items-center space-x-3">
-            <h3
-              id="visa-modal-title"
-              class="text-lg sm:text-xl font-bold text-brand-navy tracking-tight"
-            >
-              Visa Support Services
-            </h3>
-          </div>
-          <button
-            type="button"
-            onclick="closeServiceModal('visa')"
-            aria-label="Close modal"
-            class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M6 18L18 6M6 6l12 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              ></path>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Scrollable Middle Area -->
-        <div class="overflow-y-auto max-h-[65vh] p-6 space-y-6 text-slate-700">
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Our specialized visa advisory division provides comprehensive procedural assistance and
-            documentation checks to ensure applications meet official immigration requirements.
-          </p>
-
-          <!-- 4 Visa Service Blocks -->
-          <div class="space-y-4">
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                1
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">Tourist and Visit Visas</p>
-                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Guidance for tourist and visit visa applications.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                2
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">Family Visit Visas</p>
-                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Guidance for family visit visa applications.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                3
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">Work Visa Guidance</p>
-                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                  Guidance on work visas. We provide guidance only and do not place people in jobs.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="flex items-start gap-3.5 p-4 rounded-xl border border-slate-200 bg-white hover:border-brand-royal transition-colors"
-            >
-              <div
-                class="w-8 h-8 rounded-lg bg-brand-tint text-brand-navy flex items-center justify-center font-bold text-sm shrink-0"
-              >
-                4
-              </div>
-              <div>
-                <p class="text-sm font-bold text-brand-navy">
-                  Initial Visa Assessment and Advice on Next Steps
-                </p>
-                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                  An initial assessment of your situation, with advice on what to do next.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Statutory End Note -->
-          <div
-            class="p-4 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-600 leading-relaxed"
-          >
-            <span class="font-bold text-slate-700">Notice:</span> Visa decisions rest with the
-            relevant authorities and outcomes cannot be guaranteed.
-          </div>
-        </div>
-
-        <!-- Fixed Footer Bar -->
-        <div
-          class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 shrink-0 z-10"
-        >
-          <div class="flex items-center text-xs font-semibold text-slate-600">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2"></span>
-            We respond within 24 to 48 hours.
-          </div>
-          <div class="flex items-center gap-3 w-full sm:w-auto">
-            <a
-              href="https://wa.me/447495359904"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex-1 sm:flex-initial inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold text-emerald-600 bg-white border border-emerald-300 hover:bg-emerald-50 transition-colors shadow-sm"
-            >
-              Chat on WhatsApp
-            </a>
-            <a
-              href="#contact"
-              onclick="closeServiceModal('visa')"
-              class="flex-1 sm:flex-initial inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-brand-navy hover:bg-brand-navyDark transition-colors shadow-sm"
-            >
-              Book a Consultation
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script data-purpose="mobile-nav-toggle-logic">
       function toggleMobileNav() {
