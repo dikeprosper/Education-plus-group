@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Site styles (image paths are relative to assets/css/) ---- */
+body {
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Home hero */
+.hero {
+  z-index: 1 !important;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.726), rgba(255, 255, 255, 0.699)),
+    url("../../image/hero-background.webp");
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-color: #f8fafc;
+}
+@media (max-width: 1023px) { .heroOverlay { margin-top: -380px; } }
+@media (max-width: 900px)  { .heroOverlay { margin-top: -300px; } }
+@media (max-width: 760px)  { .heroOverlay { margin-top: -290px; } }
+@media (max-width: 640px)  { .heroOverlay { margin-top: -160px; } }
+@media (min-width: 1024px) { .heroOverlay { margin-top: -300px; margin-bottom: -100px; } }
+@media (min-width: 1046px) { .heroOverlay { margin-top: -330px; margin-bottom: -100px; } }
+@media (min-width: 1180px) { .heroOverlay { margin-top: -400px; margin-bottom: -100px; } }
+
+/* ISR page hero */
+.page-hero {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.8)),
+    url("../../image/hero-background.webp");
+  background-size: cover;
+  background-position: center left;
+  background-color: #f8fafc;
+}
+
+/* Map banner */
+.banner {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../../image/banner.webp");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Study destinations */
+#destinations {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+    url("../../image/bg.webp");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ISR "How it works" connector line (li.step is position:relative; space-y-8 = 2rem gap) */
+.step::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 44px;
+  bottom: -32px;
+  width: 2px;
+  background: #cfe0f3;
+}
+.step:last-child::before { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}
